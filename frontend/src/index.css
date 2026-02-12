@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Performance-First Design System */
+
+body {
+  @apply bg-zinc-900 text-zinc-100 overflow-hidden;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  -webkit-font-smoothing: antialiased; /* Keep text crisp */
+}
+
+/* Hard edges for utility feel, reduced GPU load */
+.panel {
+  @apply bg-zinc-800 border border-zinc-700 shadow-sm;
+}
+
+/* Simple, standard scrollbar - No custom webkit garbage that lags scrolling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-zinc-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-600 hover:bg-zinc-500;
+}
+
+/* Button Reset */
+button:active {
+  transform: translateY(1px); /* Simple mechanical feedback */
+}
