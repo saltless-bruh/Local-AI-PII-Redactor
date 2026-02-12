@@ -31,19 +31,19 @@ The application follows a **local client-server architecture** with clear separa
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│                  Frontend (Electron + React)         │
-│  • User Interface & File Selection                   │
-│  • Document Preview & Redaction Review               │
-│  • Job Queue Management                              │
+│                  Frontend (Electron + React)        │
+│  • User Interface & File Selection                  │
+│  • Document Preview & Redaction Review              │
+│  • Job Queue Management                             │
 └────────────────┬────────────────────────────────────┘
                  │
                  │ IPC (JSON over stdin/stdout)
                  │
 ┌────────────────▼────────────────────────────────────┐
-│              Backend (Python)                        │
+│              Backend (Python)                       │
 │  • OCR Engine (PaddleOCR)                           │
-│  • PII Detection (Microsoft Presidio + Custom)       │
-│  • Document Pre-processing (OpenCV)                  │
+│  • PII Detection (Microsoft Presidio + Custom)      │
+│  • Document Pre-processing (OpenCV)                 │
 │  • Redaction Engine (PyMuPDF, Pillow)               │
 └─────────────────────────────────────────────────────┘
 ```
